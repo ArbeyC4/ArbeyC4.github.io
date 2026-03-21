@@ -984,13 +984,29 @@ body {
     font-size: 1.2rem;
   }
 }
+.nombre {
+  color: #ffd700;
+  font-weight: bold;
+  position: relative;
+  animation: brilloNombre 2s ease-in-out infinite alternate;
+  text-shadow: 0 0 5px #ffd700, 0 0 15px #ffea00;
+}
+
+@keyframes brilloNombre {
+  0% {
+    text-shadow: 0 0 5px #ffd700, 0 0 10px #ffea00;
+  }
+  100% {
+    text-shadow: 0 0 15px #fff176, 0 0 30px #ffd700;
+  }
+}
     </style>
 </head>
 <body class="not-loaded">
   <div class="night"></div>
   <div class="mensaje">
     <p>
-      Para ti, Melany,<br>
+      Para ti,<span class="nombre">Melany</span>,<br>
       estas flores amarillas<br>
       que brillan tanto<br>
       como tus ojitos.<br>
