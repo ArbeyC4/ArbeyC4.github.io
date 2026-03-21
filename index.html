@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     <title>Sunflower Garden with Shooting Stars</title>
     <style>
 *,
@@ -70,6 +71,7 @@ body {
     ),
     linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
 }
+
 
 .shooting-stars {
   position: fixed;
@@ -935,10 +937,66 @@ body {
   0%, 100% { transform: scale(0.35) rotate(-45deg) rotateY(-120deg); }
   50% { transform: scale(0.35) rotate(-42deg) rotateY(-115deg); }
 }
+/* TEXTO */
+.mensaje {
+  position: fixed;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30%;
+  color: #ffe8a3;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: left;
+  z-index: 999;
+}
+
+.mensaje p {
+  opacity: 0;
+  animation: aparecerTexto 4s ease forwards;
+  animation-delay: 2s;
+}
+
+/* Animación suave */
+@keyframes aparecerTexto {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* ✨ RESPONSIVE PARA MÓVIL */
+@media (max-width: 768px) {
+  .mensaje {
+    top: 10%;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
     </style>
 </head>
 <body class="not-loaded">
   <div class="night"></div>
+  <div class="mensaje">
+    <p>
+      Para ti, Melany,<br>
+      estas flores amarillas<br>
+      que brillan tanto<br>
+      como tus ojitos.<br>
+      <strong>¡Espero que te gusten!</strong>
+    </p>
+  </div>
   
   <div class="shooting-stars">
     <div class="shooting-star"></div>
